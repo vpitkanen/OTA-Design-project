@@ -3,18 +3,18 @@ Design project of operational Transgonductance Amplifier in 45 nm CMOS Technolog
 Design was verified by various simulations using different testbenches. Group project (2 people).
 
 
-## Design Specifications
+## Design Specifications and Results
 
-| Parameter | Target |
-|----------|--------|
-| Supply Voltage (Vdd) | 3 V |
-| Gain (A) | > 39 dB (≈ > 90 V/V) |
-| Unity Gain Bandwidth (ft) | > 10 MHz |
-| Slew Rate (SR) | > 10 MV/s |
-| Phase Margin (PM) | > 60° |
-| Output Linear Range | 0.6 – 2.2 V |
-| Input Common-Mode Range | 1.5 – 2.3 V |
-| Current Ratio (K) | 2 |
+| Parameter | Target | Result |
+|----------|--------|--------|
+| Supply Voltage (Vdd) | 3 V | 3V |
+| Gain (A) | > 39 dB (≈ > 90 V/V) | 40.5 dB |
+| Unity Gain Bandwidth (ft) | > 10 MHz | 11.4 MHz |
+| Slew Rate (SR) | > 10 MV/s | 15 MV/s |
+| Phase Margin (PM) | > 60° | 103° |
+| Output Linear Range | 0.6 – 2.2 V | 0.48 V - 2.3 V |
+| Input Common-Mode Range | 1.5 – 2.3 V | 0.9 V - 1.9 V |
+| Current Ratio (K) | 2 | 2 |
 
 ## Schematics
 ### OTA
