@@ -1,5 +1,5 @@
 # OTA-Design-project
-Design project of operational transconductance amplifier using Cadence Virtuoso. 
+Design project of operational Transgonductance Amplifier in 45 nm CMOS Technology using Cadence Virtuoso. 
 Design was verified by various simulations using different testbenches. Group project (2 people).
 
 
