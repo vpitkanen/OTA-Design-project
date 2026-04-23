@@ -16,4 +16,11 @@ Design was verified by various simulations using different testbenches.
 | Current Ratio (K) | 2 |
 
 ## Schematics
+--OTA
 ![OTA_schematic](OTA_schematic.png)
+
+--Testbench for DC-simulations
+![TB_DC](testbench_dc.png)
+
+--Testbench for AC-simulations
+![TB_AC](testbench_ac_bode.png)
