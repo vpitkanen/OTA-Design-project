@@ -1,6 +1,6 @@
 # OTA-Design-project
 Design project of operational transcoductance amplifier using Cadence Virtuoso. 
-Design was verified using testbench simulations.
+Design was verified by various simulations using different testbenches.
 
 ## Design Specifications
 
@@ -16,3 +16,4 @@ Design was verified using testbench simulations.
 | Current Ratio (K) | 2 |
 
 ## Schematics
+![OTA_schematic](OTA_schematic.png)
