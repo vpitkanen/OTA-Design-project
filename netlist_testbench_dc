@@ -1,0 +1,86 @@
+// Point Netlist Generated on: Apr 23 16:05:45 2026
+// Generated for: spectre
+// Design Netlist Generated on: Apr 23 16:05:45 2026
+// Design library name: Harkkatyo
+// Design cell name: testbench_dc
+// Design view name: schematic
+simulator lang=spectre
+include "ade_e.scs"
+global 0 vdd!
+include "/usr/local/contrib/cadence/PDK/gpdk045_v_5_0/gpdk045/../models/spectre/gpdk045.scs" section=mc
+
+// Library name: Harkkatyo
+// Cell name: OTA_tyo
+// View name: schematic
+subckt OTA_tyo bias inn inp outp
+    M5 (outp net14 0 0) g45n2svt w=(3u) l=3u nf=1 as=450f ad=450f ps=6.3u \
+        pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n sca=13.86017 \
+        scb=0.00838 scc=0.00123 m=(4)
+    M4 (net14 net14 0 0) g45n2svt w=(3u) l=3u nf=1 as=450f ad=450f ps=6.3u \
+        pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n sca=13.86017 \
+        scb=0.00838 scc=0.00123 m=(2)
+    M8 (0 0 0 0) g45n2svt w=(3u) l=3u nf=1 as=450f ad=450f ps=6.3u pd=6.3u \
+        nrd=50m nrs=50m sa=150n sb=150n sd=200n sca=13.86017 scb=0.00838 \
+        scc=0.00123 m=(2)
+    M1 (net8 inn bias 0) g45n2svt w=(4u) l=400n nf=1 as=600f ad=600f \
+        ps=8.3u pd=8.3u nrd=37.5m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=23.82298 scb=0.02258 scc=0.00180 m=(2)
+    M0 (net5 inp bias 0) g45n2svt w=(4u) l=400n nf=1 as=600f ad=600f \
+        ps=8.3u pd=8.3u nrd=37.5m nrs=37.5m sa=150n sb=150n sd=200n \
+        sca=23.82298 scb=0.02258 scc=0.00180 m=(2)
+    M11 (vdd! vdd! vdd! vdd!) g45p2svt w=(3u) l=3u nf=1 as=450f ad=450f \
+        ps=6.3u pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n \
+        sca=4.08476 scb=0.00272 scc=0.00009 m=(2)
+    M10 (outp net5 vdd! vdd!) g45p2svt w=(3u) l=3u nf=1 as=450f ad=450f \
+        ps=6.3u pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n \
+        sca=4.08476 scb=0.00272 scc=0.00009 m=(4)
+    M9 (net14 net8 vdd! vdd!) g45p2svt w=(3u) l=3u nf=1 as=450f ad=450f \
+        ps=6.3u pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n \
+        sca=4.08476 scb=0.00272 scc=0.00009 m=(2)
+    M7 (net8 net8 vdd! vdd!) g45p2svt w=(3u) l=3u nf=1 as=450f ad=450f \
+        ps=6.3u pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n \
+        sca=4.08476 scb=0.00272 scc=0.00009 m=(2)
+    M6 (net5 net5 vdd! vdd!) g45p2svt w=(3u) l=3u nf=1 as=450f ad=450f \
+        ps=6.3u pd=6.3u nrd=50m nrs=50m sa=150n sb=150n sd=200n \
+        sca=4.08476 scb=0.00272 scc=0.00009 m=(2)
+ends OTA_tyo
+// End of subcircuit definition.
+
+// Library name: Harkkatyo
+// Cell name: Bias
+// View name: schematic
+subckt Bias bias iin
+    M2 (bias iin 0 0) g45n2svt w=(5u) l=1u nf=1 as=750f ad=750f ps=10.3u \
+        pd=10.3u nrd=30m nrs=30m sa=150n sb=150n sd=200n sca=14.45853 \
+        scb=0.01110 scc=0.00105 m=(4)
+    M3 (iin iin 0 0) g45n2svt w=(5u) l=1u nf=1 as=750f ad=750f ps=10.3u \
+        pd=10.3u nrd=30m nrs=30m sa=150n sb=150n sd=200n sca=14.45853 \
+        scb=0.01110 scc=0.00105 m=(4)
+ends Bias
+// End of subcircuit definition.
+
+// Library name: Harkkatyo
+// Cell name: testbench_dc
+// View name: schematic
+I0 (net3 out inp out) OTA_tyo
+I4 (net3 net2) Bias
+V5 (inp 0) vsource dc=1.9 type=dc
+V0 (vdd! 0) vsource dc=3 type=dc
+C0 (out 0) capacitor c=10p
+R2 (vdd! net2) resistor r=40K
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+dc dc dev=V5 param=dc start=0 stop=3 step=1m oppoint=rawfile maxiters=150 \
+    maxsteps=10000 annotate=status
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save I4.M2:d 
+saveOptions options save=all pwr=all currents=selected
