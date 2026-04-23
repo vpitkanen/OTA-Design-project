@@ -1,5 +1,5 @@
 # OTA-Design-project
-Design project of operational transcoductance amplifier using Cadence Virtuoso. 
+Design project of operational transconductance amplifier using Cadence Virtuoso. 
 Design was verified by various simulations using different testbenches.
 
 ## Design Specifications
