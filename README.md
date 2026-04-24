@@ -18,10 +18,10 @@ Component values was first calculated by hand. Design was verified with various 
 
 ## Schematics
 ### OTA
-![OTA_schematic](OTA_schematic.png)
+![OTA_schematic](Schematics/OTA_schematic.png)
 
 ### Testbench for DC-simulations
-![TB_DC](testbench_dc.png)
+![TB_DC](Schematics/testbench_dc.png)
 
 ### Testbench for AC-simulations
-![TB_AC](testbench_ac_bode.png)
+![TB_AC](Schematics/testbench_ac_bode.png)
