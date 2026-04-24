@@ -1,6 +1,6 @@
 # OTA-Design-project
 Design project of OTA (Operational Transconductance Amplifier) in 45 nm CMOS Technology using Cadence Virtuoso. 
-Component values was first calculated by hand. Design was verified with various simulations using testbenches. Group project (2 people).
+Component values was first calculated by hand. Design was verified with various simulations using testbenches. Group project (2 people) for electronic design 3 -course.
 
 
 ## Design Specifications and Results
